@@ -1,0 +1,23 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  color: $dark-blue;
+  margin: 0 0 20px;
+}
+p {
+  color: $pf;
+  line-height: 1.7;
+  margin: 0 0 20px;
+}
+a {
+  color: $blue;
+  text-decoration: none;
+  @include trans;
+  &:hover {
+    color: darken($blue, 10%);
+  }
+}

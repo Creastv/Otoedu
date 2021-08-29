@@ -1,0 +1,18 @@
+.zajecia-bl {
+  margin-bottom: 30px;
+}
+.zajecia-bl__wraper {
+  display: flex;
+  @media #{$sm} {
+    flex-wrap: wrap;
+  }
+  .content-post {
+    @media #{$sm} {
+      width: 50%;
+      margin: 0;
+    }
+    @media #{$xxs} {
+      width: 100%;
+    }
+  }
+}

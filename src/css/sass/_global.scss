@@ -1,0 +1,125 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: $pf;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+::-moz-selection {
+  background: $light-blue;
+  color: #fff;
+}
+::selection {
+  background: $light-blue;
+  color: #fff;
+}
+.page-content {
+  align-items: flex-start;
+  display: flex;
+  @media #{$sm} {
+    flex-wrap: wrap;
+  }
+  @media #{$xs} {
+    max-width: 100%;
+  }
+  .content-post {
+    @media #{$sm} {
+      width: 50%;
+      margin: 0;
+    }
+    @media #{$xxs} {
+      width: 100%;
+    }
+  }
+}
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  @media #{$sm} {
+    max-width: 100%;
+  }
+}
+
+.container-fluid {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  @media #{$sm} {
+    max-width: 100%;
+  }
+}
+
+#main-page {
+  margin-bottom: 50px;
+}
+.wp-block-image {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.wp-block-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+blockquote {
+  border-left: 1px solid $blue;
+  margin: 54px 65px 44px 70px !important;
+  padding: 0 0 0 20px;
+  font-size: 18px;
+  font-style: italic;
+  line-height: 1.78;
+  position: relative;
+  @media #{$xs} {
+    margin: 50px 20px;
+  }
+  p {
+    color: $dark-blue;
+  }
+}
+
+#go-to-top {
+  @include trans;
+  background: rgba($dark-blue, 0.3);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 50px;
+  width: 50px;
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 12px 15px;
+  border-radius: 100px;
+  @media #{$xs} {
+    bottom: 10px;
+    right: 10px;
+  }
+  &:hover {
+    background: rgba($dark-blue, 0.8);
+  }
+}
+.show {
+  display: block !important;
+}

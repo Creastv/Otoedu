@@ -1,0 +1,87 @@
+.single-page,
+.single-post,
+.title-index {
+  margin-bottom: 30px;
+  .__header {
+    width: 100vw;
+    margin-left: -50vw;
+    left: 50%;
+    position: relative;
+    background: darken($light, 1);
+    padding: 50px 15px;
+    margin-bottom: 30px;
+  }
+  .___title {
+    text-align: center;
+    font-size: 37px;
+    text-transform: uppercase;
+  }
+}
+
+.single-post {
+  .___thumbnail {
+    text-align: center;
+    padding: 20px;
+    @media #{$md} {
+      padding: 20px 0;
+    }
+    img {
+      border-radius: 6px;
+      width: 100%;
+      height: auto;
+      @media #{$sm} {
+        width: 100%;
+      }
+    }
+  }
+  .__content {
+    max-width: 998px;
+    width: 100vw;
+    margin-left: calc((0vw - 998px) / 2);
+    left: 50%;
+    position: relative;
+    // margin: 0 auto;
+    @media #{$md} {
+      width: 90%;
+      margin-left: 0;
+      left: inherit;
+      margin: 0 auto;
+    }
+    @media #{$sm} {
+      width: 100%;
+    }
+  }
+  .___post-meta {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    * {
+      font-size: 12px;
+      margin: 0 2px;
+    }
+  }
+  // CPT ZAJECIA
+  .___inf {
+    display: flex;
+    margin-bottom: 30px;
+    @media #{$sm} {
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: center;
+      div {
+        margin-bottom: 10px;
+      }
+    }
+    * {
+      font-size: 21px;
+      text-transform: uppercase;
+      // color: $p;
+    }
+  }
+  .___singin {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

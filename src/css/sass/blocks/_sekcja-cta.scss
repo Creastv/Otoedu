@@ -1,0 +1,29 @@
+.section-cta-bl {
+  width: 100vw;
+  margin-left: -50vw;
+  left: 50%;
+  position: relative;
+  @include grad2;
+  padding: 50px 15px;
+  margin-bottom: 30px;
+}
+.section-cta-bl__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media #{$xs} {
+    flex-wrap: wrap;
+  }
+  p {
+    color: #fff;
+    font-size: 28px;
+    margin-right: 10px;
+  }
+  .btn {
+    padding: 15px 50px;
+    background: #fff;
+    &:hover {
+      color: $dark-blue !important;
+    }
+  }
+}

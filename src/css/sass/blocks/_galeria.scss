@@ -1,0 +1,17 @@
+.blocks-gallery-grid {
+  .blocks-gallery-item {
+    overflow: hidden;
+    border-radius: 6px;
+    @include trans;
+    &:hover {
+      @include shadow;
+      transform: translateY(-10px);
+      img {
+        transform: scale(1.1);
+      }
+    }
+    img {
+      @include trans;
+    }
+  }
+}

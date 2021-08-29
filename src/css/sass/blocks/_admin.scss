@@ -1,0 +1,314 @@
+.wp-block {
+  max-width: 90%;
+}
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.wp-block[data-align="left"],
+.wp-block[data-align="right"] {
+  width: 100%;
+  height: inherit;
+  float: none;
+}
+.wp-block[data-align="right"] > * {
+  float: none !important;
+  margin-left: 2em /*!rtl:end:ignore*/;
+}
+.wp-block[data-align="left"] > * {
+  float: none !important;
+  margin-right: 2em /*!rtl:end:ignore*/;
+}
+
+.alignleft {
+  text-align: left;
+}
+
+.alignright {
+  text-align: right;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.acf-block-preview {
+  form {
+    label {
+      display: block;
+    }
+    span,
+    p {
+      display: block;
+    }
+    input {
+      // width: 100%;
+    }
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  input[type="password"],
+  input[type="search"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="range"],
+  input[type="date"],
+  input[type="month"],
+  input[type="week"],
+  input[type="time"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="color"],
+  select,
+  textarea {
+    color: #999999;
+    border-color: #f8f8f8;
+    background-color: #f8f8f8;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  input[type="checkbox"],
+  input[type="radio"] {
+    margin-right: 10px;
+  }
+  select {
+    width: 100%;
+    outline: none;
+    border: 1px solid #f8f8f8;
+    border-radius: 5px;
+    background: #f8f8f8;
+    display: block;
+    padding: 3px 20px;
+    max-width: 100%;
+    height: 56px;
+  }
+  textarea {
+    width: 100%;
+    outline: none;
+    border: 1px solid #f8f8f8;
+    border-radius: 5px;
+    background: #f8f8f8;
+    display: block;
+    padding: 12px 20px 3px;
+    max-width: 100%;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  input[type="password"],
+  input[type="search"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="range"],
+  input[type="date"],
+  input[type="month"],
+  input[type="week"],
+  input[type="time"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="color"] {
+    width: 100%;
+    outline: none;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 3px 20px;
+    height: 56px;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="url"]:focus,
+  input[type="password"]:focus,
+  input[type="search"]:focus,
+  input[type="number"]:focus,
+  input[type="tel"]:focus,
+  input[type="range"]:focus,
+  input[type="date"]:focus,
+  input[type="month"]:focus,
+  input[type="week"]:focus,
+  input[type="time"]:focus,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="color"]:focus,
+  textarea:focus,
+  select:focus,
+  select:focus,
+  textarea:focus {
+    color: #0085ff;
+    border-color: #0085ff;
+    background-color: #f8f8f8;
+  }
+}
+
+.acf-block-preview {
+  .margin-top-50 {
+    margin-top: 0 !important;
+  }
+}
+
+.fade {
+  padding: 30px 10px;
+  border: 1px solid rgba(red, 0.1);
+  position: relative;
+  &:before {
+    content: "FadeUp";
+    display: block;
+    position: absolute;
+    background-color: $blue;
+    color: #fff;
+    font-size: 10px;
+    padding: 2px 10px;
+    border-radius: 3px;
+    top: 3px;
+    left: 3px;
+  }
+}
+
+.acf-block-preview {
+  .wy-posty-wrap {
+    .swiper-wrapper {
+      display: flex;
+      .swiper-slide {
+        width: 33.333%;
+      }
+    }
+  }
+}
+.acf-block-preview {
+  .two-col-bl,
+  .wraper-bl,
+  .wraper__hero,
+  .hero-bl {
+    width: 100%;
+    margin-left: 0;
+    left: 0;
+    padding: inherit;
+  }
+}
+
+#f-search {
+  ul {
+    list-style: none;
+    padding: 0px;
+  }
+  .f-search__tabs {
+    display: flex;
+    margin-bottom: 30px;
+    li {
+      margin-right: 10px;
+      a {
+        padding: 10px 15px 10px 0;
+        text-transform: uppercase;
+        font-size: 14px;
+      }
+    }
+    .active {
+      a {
+        font-weight: 900;
+        border-bottom: 1px solid $blue;
+      }
+    }
+  }
+  .f-search__filers {
+    display: flex;
+    li {
+      margin-right: 20px;
+      a {
+        display: flex;
+        justify-content: space-between;
+        width: 150px;
+        padding: 15px;
+        border-radius: 6px;
+        background: lighten($light-blue, 5%);
+        @include trans;
+        &:hover {
+          @include shadow;
+          span {
+            color: red;
+          }
+        }
+      }
+    }
+  }
+}
+
+#f-search__form {
+  display: flex;
+  border: 1px solid $light-blue;
+  background-color: darken($light, 1);
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 30px;
+  @media #{$xs} {
+    flex-wrap: wrap;
+  }
+  .select-wrapper {
+    background-color: darken($light, 1);
+    position: relative;
+    width: 50%;
+    border-right: 1px solid $light-blue;
+    @media #{$xs} {
+      margin: 5px 0;
+      width: 100%;
+      border: none;
+      border-bottom: darken($light, 1) !important;
+    }
+    &:last-child {
+      border: none !important;
+    }
+    // Dropdown icon
+    &::after {
+      color: black;
+      content: "▾";
+      margin-right: 10px;
+      pointer-events: none;
+      position: absolute;
+      right: 10px;
+      top: 7px;
+      font-size: 20px;
+      @media #{$xs} {
+        right: 0;
+      }
+    }
+  }
+
+  .select {
+    border-radius: 6px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: darken($light, 1);
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    padding: 12px;
+    width: 100%;
+    font-size: 18px;
+
+    &:focus {
+      color: black;
+    }
+    // Hack for IE 11+
+    &::-ms-expand {
+      display: none;
+    }
+  }
+  button {
+    border: none;
+    margin-left: -6px;
+    @media #{$xs} {
+      width: 100%;
+      margin: 0;
+    }
+    &:hover {
+      transform: inherit !important;
+    }
+  }
+}

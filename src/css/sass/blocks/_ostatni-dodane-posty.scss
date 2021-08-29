@@ -1,0 +1,38 @@
+.wy-posty {
+  overflow: hidden;
+  padding-bottom: 30px;
+  //   margin-left: 15px;
+  //   margin-right: 15px;
+  .arrow {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+    div {
+      @include trans;
+      padding: 5px;
+      cursor: pointer;
+      opacity: 0.1;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+.wy-posty-wrap {
+  .swiper-slide {
+    .__header {
+      width: 100% !important;
+      margin-left: inherit !important;
+      left: inherit !important;
+      background: none;
+      padding: 0px !important;
+      margin-bottom: inherit;
+    }
+    .___title {
+      text-align: inherit;
+      font-weight: 500;
+      font-size: 24px;
+      text-transform: inherit;
+    }
+  }
+}

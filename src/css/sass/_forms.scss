@@ -1,0 +1,126 @@
+textarea,
+input {
+  background-color: darken($light, 1);
+  border: 1px solid $light-blue;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+#f-search {
+  ul {
+    list-style: none;
+    padding: 0px;
+  }
+  .f-search__tabs {
+    display: flex;
+    margin-bottom: 30px;
+    li {
+      margin-right: 10px;
+      a {
+        padding: 10px 15px 10px 0;
+        text-transform: uppercase;
+        font-size: 14px;
+      }
+    }
+    .active {
+      a {
+        font-weight: 900;
+        border-bottom: 1px solid $blue;
+      }
+    }
+  }
+  .f-search__filers {
+    display: flex;
+    li {
+      margin-right: 20px;
+      a {
+        display: flex;
+        justify-content: space-between;
+        width: 150px;
+        padding: 15px;
+        border-radius: 6px;
+        background: lighten($light-blue, 5%);
+        @include trans;
+        &:hover {
+          @include shadow;
+          span {
+            color: red;
+          }
+        }
+      }
+    }
+  }
+}
+
+#f-search__form {
+  display: flex;
+  border: 1px solid $light-blue;
+  background-color: darken($light, 1);
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 30px;
+  @media #{$xs} {
+    flex-wrap: wrap;
+  }
+  .select-wrapper {
+    background-color: darken($light, 1);
+    position: relative;
+    width: 50%;
+    border-right: 1px solid $light-blue;
+    @media #{$xs} {
+      margin: 5px 0;
+      width: 100%;
+      border: none;
+      border-bottom: darken($light, 1) !important;
+    }
+    &:last-child {
+      border: none !important;
+    }
+    // Dropdown icon
+    &::after {
+      color: black;
+      content: "▾";
+      margin-right: 10px;
+      pointer-events: none;
+      position: absolute;
+      right: 10px;
+      top: 7px;
+      font-size: 20px;
+      @media #{$xs} {
+        right: 0;
+      }
+    }
+  }
+
+  .select {
+    border-radius: 6px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: darken($light, 1);
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    padding: 12px;
+    width: 100%;
+    font-size: 18px;
+
+    &:focus {
+      color: black;
+    }
+    // Hack for IE 11+
+    &::-ms-expand {
+      display: none;
+    }
+  }
+  button {
+    border: none;
+    margin-left: -6px;
+    @media #{$xs} {
+      width: 100%;
+      margin: 0;
+    }
+    &:hover {
+      transform: inherit !important;
+    }
+  }
+}

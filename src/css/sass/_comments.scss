@@ -1,0 +1,55 @@
+#comments {
+  padding: 30px 15px;
+  .comments-title {
+    font-size: 21px;
+  }
+  .form-submit {
+    #submit {
+      border: none;
+    }
+  }
+  .comment-form-author,
+  .comment-form-comment,
+  .comment-notes,
+  .comment-form-email {
+    text-align: left;
+  }
+  .comment-list {
+    list-style: none;
+    li {
+      article {
+        background: #f8f8f8;
+        padding: 15px;
+        border-radius: 6px;
+        .comment-meta {
+          display: flex;
+          justify-content: space-between;
+          time {
+            font-size: 12px;
+          }
+          .edit-link {
+            font-size: 12px;
+            padding: 3px;
+            margin: 10px;
+            border-radius: 3px;
+            border: 1px solid $blue;
+          }
+          .comment-author.vcard {
+            img {
+              display: none;
+            }
+          }
+        }
+        .comment-content {
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+}
+
+#author,
+.comment-form-email #email,
+.comment-form-comment #comment {
+  width: 100%;
+}

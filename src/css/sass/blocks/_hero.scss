@@ -1,0 +1,130 @@
+.hero-bl {
+  width: 100vw;
+  margin-left: -50vw;
+  left: 50%;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+  padding: 50px 0 100px;
+  @media #{$xs} {
+    padding: 0;
+  }
+  .wraper__hero {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    margin-left: -50vw;
+    left: 50%;
+    position: relative;
+    @media #{$xs} {
+      flex-wrap: wrap;
+    }
+    .col-1 {
+      align-self: stretch;
+      min-width: calc(((100% - 1370px) / 2) + 456px);
+      max-width: calc(((100% - 1370px) / 2) + 456px);
+      @media #{$lg} {
+        width: calc(33.33% + 15px);
+      }
+      @media #{$sm} {
+        width: 40%;
+      }
+      @media #{$xs} {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        padding-right: 100px;
+      }
+    }
+    .col-2 {
+      padding: 50px 0 50px 150px;
+      flex: auto;
+      @media #{$lg} {
+        width: calc(66.66% + 15px);
+        padding: 80px;
+      }
+      @media #{$sm} {
+        width: 100%;
+        padding: 30px 30px 30px 80px;
+      }
+      @media #{$xs} {
+        width: 100%;
+        padding: 30px;
+      }
+      h1 {
+        font-size: 37px;
+        margin-bottom: 30px;
+      }
+    }
+    .col-3 {
+      min-width: calc((100% - 1370px) / 2);
+    }
+    .img {
+      margin-bottom: 80px;
+      height: 100%;
+      position: relative;
+      @media #{$sm} {
+        margin-bottom: 50px;
+      }
+      @media #{$xs} {
+        margin-bottom: 30px;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        @include grad2;
+        left: -20%;
+        bottom: -70px;
+        width: 70%;
+        height: 300px;
+        border-radius: 60px;
+        @media #{$xs} {
+          bottom: -20px;
+        }
+      }
+      .img__ornament {
+        border-radius: 6px;
+      }
+      .orn {
+        background-color: $blue;
+        top: 100px;
+        position: absolute;
+        text-align: center;
+        right: -50px;
+        padding: 25px;
+        @include shadow;
+      }
+      .orn--2 {
+        position: absolute;
+        text-align: center;
+        background-color: #fff;
+        padding: 25px;
+        right: 150px;
+        bottom: -40px;
+        box-shadow: 0px -10px 15px 10px rgba(0, 0, 0, 0.09);
+        @media #{$sm} {
+          right: 50px;
+        }
+        @media #{$xs} {
+          right: 50px;
+          padding: 15px;
+          bottom: -30px;
+        }
+      }
+      img {
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        min-width: auto;
+        max-width: 100%;
+        min-height: 100%;
+        max-height: 500px;
+        -o-object-fit: cover;
+        object-fit: cover;
+        @media #{$xs} {
+          max-height: 300px;
+        }
+      }
+    }
+  }
+}

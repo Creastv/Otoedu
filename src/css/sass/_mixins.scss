@@ -1,0 +1,143 @@
+@mixin shadow {
+  -webkit-box-shadow: 0px 5px 15px 10px rgba(0, 0, 0, 0.09);
+  -moz-box-shadow: 0px 5px 15px 10px rgba(0, 0, 0, 0.09);
+  box-shadow: 0px 5px 15px 10px rgba(0, 0, 0, 0.09);
+}
+@mixin shadow2 {
+  -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.26);
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.26);
+}
+@mixin shadowHover {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+@mixin trans {
+  -webkit-transition: all 0.3s 0s ease;
+  -moz-transition: all 0.3s 0s ease;
+  -o-transition: all 0.3s 0s ease;
+  transition: all 0.3s 0s ease;
+}
+@mixin grad {
+  background: rgb(0, 96, 158);
+  background: -moz-linear-gradient(
+    280deg,
+    rgba(0, 96, 158, 1) 0%,
+    rgba(0, 118, 186, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    280deg,
+    rgba(0, 96, 158, 1) 0%,
+    rgba(0, 118, 186, 1) 100%
+  );
+  background: linear-gradient(
+    280deg,
+    rgba(0, 96, 158, 1) 0%,
+    rgba(0, 118, 186, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00609e",endColorstr="#0076ba",GradientType=1);
+}
+@mixin grad2 {
+  background: rgb(1, 65, 106);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(1, 65, 106, 1) 0%,
+    rgba(0, 98, 160, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(1, 65, 106, 1) 0%,
+    rgba(0, 98, 160, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(1, 65, 106, 1) 0%,
+    rgba(0, 98, 160, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#01416a",endColorstr="#0062a0",GradientType=1);
+}
+
+@mixin grad-hover {
+  background: rgb(0, 96, 158);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(0, 96, 158, 1) 0%,
+    rgba(0, 118, 186, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(0, 96, 158, 1) 0%,
+    rgba(0, 118, 186, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(0, 96, 158, 1) 0%,
+    rgba(0, 118, 186, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00609e",endColorstr="#0076ba",GradientType=1);
+}
+@mixin grad2-hover {
+  background: rgb(1, 65, 106);
+  background: -moz-linear-gradient(
+    280deg,
+    rgba(1, 65, 106, 1) 0%,
+    rgba(0, 98, 160, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    280deg,
+    rgba(1, 65, 106, 1) 0%,
+    rgba(0, 98, 160, 1) 100%
+  );
+  background: linear-gradient(
+    280deg,
+    rgba(1, 65, 106, 1) 0%,
+    rgba(0, 98, 160, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#01416a",endColorstr="#0062a0",GradientType=1);
+}
+@mixin grad-active {
+  background: rgb(0, 117, 184);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(0, 117, 184, 1) 0%,
+    rgba(0, 96, 158, 1) 50%,
+    rgba(0, 118, 186, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(0, 117, 184, 1) 0%,
+    rgba(0, 96, 158, 1) 50%,
+    rgba(0, 118, 186, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(0, 117, 184, 1) 0%,
+    rgba(0, 96, 158, 1) 50%,
+    rgba(0, 118, 186, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0075b8",endColorstr="#0076ba",GradientType=1);
+}
+@mixin grad2-hover {
+  background: rgb(0, 98, 160);
+  background: -moz-linear-gradient(
+    280deg,
+    rgba(0, 98, 160, 1) 0%,
+    rgba(1, 65, 106, 1) 50%,
+    rgba(0, 98, 160, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    280deg,
+    rgba(0, 98, 160, 1) 0%,
+    rgba(1, 65, 106, 1) 50%,
+    rgba(0, 98, 160, 1) 100%
+  );
+  background: linear-gradient(
+    280deg,
+    rgba(0, 98, 160, 1) 0%,
+    rgba(1, 65, 106, 1) 50%,
+    rgba(0, 98, 160, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0062a0",endColorstr="#0062a0",GradientType=1);
+}

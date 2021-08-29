@@ -1,0 +1,22 @@
+.page-title{
+    text-align: center;
+    font-size: 50px;
+    color:$head;
+    padding: 50px 0 0;
+    @media #{$lg}{
+        padding: 0;
+    }
+    @media #{$xs}{
+        font-size: 31px;
+    }
+    span{
+        font-size: 15px;
+        font-weight: 400;
+        color: $main2;
+        position: relative;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        display: block;
+    }
+}

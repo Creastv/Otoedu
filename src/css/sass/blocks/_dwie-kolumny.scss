@@ -1,0 +1,137 @@
+.two-col-bl {
+  width: 100vw;
+  margin-left: -50vw;
+  left: 50%;
+  position: relative;
+  overflow: hidden;
+  padding: 15px;
+}
+
+.wraper-bl {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  margin-left: -50vw;
+  left: 50%;
+  position: relative;
+  @media #{$sm} {
+    flex-wrap: wrap;
+  }
+  .img {
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      @include grad2;
+
+      width: 70%;
+      height: 300px;
+      border-radius: 20px;
+    }
+    img {
+      position: relative;
+    }
+  }
+}
+.wraper-bl--left {
+  .col-1 {
+    min-width: calc(((100% - 1370px) / 2) + 456px);
+    @media #{$lg} {
+      width: calc(33.33% + 15px);
+    }
+    @media #{$sm} {
+      width: 100%;
+      padding-right: 30px;
+    }
+  }
+  .col-2 {
+    padding: 50px 0 50px 150px;
+    flex: auto;
+    @media #{$lg} {
+      width: calc(66.66% + 15px);
+      padding: 50px 30px 50px 150px;
+    }
+    @media #{$sm} {
+      width: 100%;
+      padding: 30px;
+    }
+  }
+  .col-3 {
+    min-width: calc((100% - 1370px) / 2);
+  }
+  .img {
+    margin-bottom: 50px;
+    @media #{$sm} {
+      margin-bottom: 50px;
+    }
+    &:after {
+      left: -50px;
+      bottom: -50px;
+      @media #{$sm} {
+        bottom: -30px;
+      }
+    }
+    img {
+      border-top-right-radius: 25px;
+      border-bottom-right-radius: 25px;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.wraper-bl--right {
+  .col-2 {
+    min-width: calc(((100% - 1370px) / 2) + 456px);
+    @media #{$lg} {
+      width: calc(33.33% + 15px);
+    }
+    @media #{$sm} {
+      width: 100%;
+      padding-left: 30px;
+    }
+  }
+  .col-1 {
+    padding: 50px 150px 50px 0;
+    flex: auto;
+    @media #{$lg} {
+      width: calc(66.66% + 15px);
+      padding: 50px 150px 50px 30px;
+    }
+    @media #{$sm} {
+      width: 100%;
+      padding: 30px;
+      order: 2;
+    }
+  }
+  .col-3 {
+    min-width: calc((100% - 1370px) / 2);
+  }
+  .img {
+    margin-bottom: 80px;
+    @media #{$sm} {
+      margin-bottom: 30px;
+    }
+    &:after {
+      right: -50px;
+      bottom: -80px;
+      @media #{$sm} {
+        bottom: -30px;
+      }
+    }
+    img {
+      border-top-left-radius: 25px;
+      border-bottom-left-radius: 25px;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.no-img-background {
+  .img {
+    &:after {
+      display: none !important;
+    }
+  }
+}

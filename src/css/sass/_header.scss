@@ -1,0 +1,113 @@
+.sticky {
+  position: fixed !important;
+  margin-top: 0 !important;
+  top: 0px;
+  right: 0;
+  width: 100%;
+  padding-left: calc((100% - 1600px) / 2);
+  background-color: #fff;
+  @include shadow;
+}
+
+#header {
+  .navigation {
+    position: relative;
+    z-index: 333;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    @media #{$sm} {
+      flex-wrap: wrap;
+    }
+    .navbar-brand {
+      flex: auto;
+      padding: 5px 10px;
+    }
+  }
+}
+.container-fluid--nav {
+  padding-left: calc((100% - 1600px) / 2);
+}
+#nav {
+  @media #{$sm} {
+    display: none;
+    width: 100%;
+    order: 4;
+    text-align: center;
+  }
+  ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+    li {
+      display: inline-block;
+      @media #{$sm} {
+        display: block;
+      }
+      a {
+        display: block;
+        padding: 10px;
+        font-size: 14px;
+        font-weight: 900;
+        color: $dark-blue;
+        &:hover {
+          color: $blue;
+          span {
+            &:after {
+              width: 100%;
+              left: 0;
+              right: auto;
+            }
+          }
+        }
+        span {
+          position: relative;
+          &:after {
+            content: "";
+            width: 0;
+            height: 1px;
+            bottom: -5px;
+            position: absolute;
+            left: auto;
+            right: 0;
+            z-index: -1;
+            transition: width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
+            background: currentColor;
+          }
+        }
+      }
+    }
+  }
+}
+.navigation__button {
+  margin-left: 60px;
+  @media #{$sm} {
+    margin-left: 30px;
+    order: 3;
+  }
+  @media #{$xxs} {
+    margin-left: 15px;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 900;
+    color: #fff;
+    padding: 20px 60px 20px 30px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    @media #{$sm} {
+      padding: 15px 30px;
+    }
+    @media #{$xxs} {
+      padding: 20px 15px;
+    }
+    span {
+      margin-left: 30px;
+      @media #{$xxs} {
+        display: none;
+      }
+    }
+  }
+}
